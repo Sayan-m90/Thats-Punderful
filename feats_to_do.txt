@@ -1,0 +1,45 @@
+myfunction(wordarray):
+    return {0:[featval1,featval2...],1:[featval1,featval2],...}
+
+take sentence, return dictionary of idx->[feat array]
+
+each word should have following features:
+    Sayan
+    leskdiffoftoptwo: float
+    #senses         : int 
+    max sense freq  : float
+    diff top max sense freqs: float
+    
+    Nima
+    1gramfreq       : float
+    2gramA          : float
+    2gramB          : float
+    3gramA          : float
+    3gramB          : float
+    3gramC          : float
+
+    Evan
+    ppdb feats - cis.upenn.edu/~ccb/ppdb
+    occurs in ppdb small: binary
+
+    collocation w/pmi feats - nltk collocations
+    in bigrams
+    in split bigrams
+    in trigrams
+    in split trigrams
+
+    #would like to also be more specific and do whether word occurs in proper context e.g., 'wt wt+1' occurs in ppdb...
+    #mi with w-1     : float
+    #mi with w+1     : float
+
+    stupid feats (that will likely work)
+    relativesentpos: float
+
+ngram gigaword.lm mysentences.txt > featsprobs.txt
+reads in featsprobs: map wordarray->indiv word probs
+def nima_feats(wordarray):
+    feats = map(wordarray)
+    0feats = feats[0]
+    1feats = feats[1]
+    ...
+    return {0:0feats, 1:1feats, ...}

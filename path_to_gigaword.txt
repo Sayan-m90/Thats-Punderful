@@ -1,0 +1,2 @@
+path to gigaword: 
+/home/corpora/original/english/gigaword-4/gigaword-pe.5g.80orless.dedup.knd.u1b1t2f2v4.arpa.gz
